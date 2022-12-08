@@ -4,7 +4,7 @@ exports.homeRoutes = (req, res) => {
   // Make a get request to /api/users
   // axios.get('http://localhost:3000/api/users')
   axios
-    .get("http://editables-renderapp-com.onrender.com/api/users")
+    .get("https://editables-renderapp-com.onrender.com/api/users")
     .then(function (response) {
       res.render("index", { users: response.data });
     })
@@ -19,7 +19,7 @@ exports.add_user = (req, res) => {
 
 exports.update_user = (req, res) => {
   axios
-    .get("http://editables-renderapp-com.onrender.com/api/users", {
+    .get("https://editables-renderapp-com.onrender.com/api/users", {
       params: { id: req.query.id },
     })
     .then(function (userdata) {
